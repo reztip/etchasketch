@@ -1,23 +1,31 @@
+
+
 .gridcontainer {
 	margin: auto auto;
-	height: 90%;
-	width: 40%;
-	top: 14%;
-	bottom: 10%;
-	left: 30%;
+	height: 700px;
+	width: 550px;
+	top: 50px;
+	bottom: 50px;
+	left: 450px;
 	background-color: #eee;
-	position: absolute;
+	position: fixed;
 	border: 5px solid black;
-
+	float: clear;
 }
 
 button {
+	margin: auto 5px;
 	border-radius: 5px;
-	font-weight: bold;
-	margin: 5px;
-	left: 46%;
+	ffont-weight: 10;
+	font-family: arial, sans-serif;
+	left: 100px;
+	top: 300px;
 	position: fixed;
 	background-color: #0088ee;
 	color: white;
+	float: left;
+	width: 200px;
+	height: 70px;
+
 
 }
