@@ -1,0 +1,23 @@
+.gridcontainer {
+	margin: auto auto;
+	height: 90%;
+	width: 40%;
+	top: 14%;
+	bottom: 10%;
+	left: 30%;
+	background-color: #eee;
+	position: absolute;
+	border: 5px solid black;
+
+}
+
+button {
+	border-radius: 5px;
+	font-weight: bold;
+	margin: 5px;
+	left: 46%;
+	position: fixed;
+	background-color: #0088ee;
+	color: white;
+
+}
