@@ -26,13 +26,15 @@ $(document).ready( function() {
   	return elt.last();
   };
 
+
   resetGrid(16,16);
 
   
 
   $('.square').on('mouseenter', function(){
+  	var newColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 
-  $(this).css('background-color', 'black');
+    $(this).css('background-color', newColor);
   });
 
 
