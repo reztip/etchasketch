@@ -6,7 +6,7 @@ $(document).ready( function() {
   var resetGrid = function(rows, cols){
   	var sqheight = gridHeight/rows - 2;
   	var sqwidth = gridWidth/cols - 2;
-  	$('.square').css({'width' : sqwidth+'px', 'height': sqheight+'px'});
+  	
   	
   	$('.gridcontainer').fadeOut('fast');
   	$('.gridcontainer').empty();
@@ -17,7 +17,7 @@ $(document).ready( function() {
   			var sq = addSquare($('.gridcontainer').last());
   		}
   	}
-
+  	$('.square').css({'width' : sqwidth+'px', 'height': sqheight+'px'});
   	$('.gridcontainer').fadeIn('slow');
   };
 
