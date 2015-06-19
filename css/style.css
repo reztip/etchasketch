@@ -8,9 +8,10 @@
 	bottom: 50px;
 	left: 450px;
 	background-color: white;
-	position: absolute;
+	
 	border: 5px solid black;
-	float: clear;
+	
+	overflow: hidden;
 }
 
 button {
@@ -20,7 +21,6 @@ button {
 	font-family: arial, sans-serif;
 	left: 100px;
 	top: 300px;
-	position: absolute;
 	background-color: #0088ee;
 	color: white;
 	float: left;
@@ -31,20 +31,11 @@ button {
 }
 
 .square{
-	position: absolute;
+
 	display: block;
-	background-color: green;
 	width: 50px;
 	height: 50px;
 	border: 2px solid white;
 	z-index: 1;
 	float: left;
-}
-
-.row {
-	width: 600px;
-	position: absolute;
-	display: block;
-	margin: 0;
-	padding: 0;
 }

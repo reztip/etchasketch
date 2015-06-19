@@ -9,12 +9,11 @@ $(document).ready( function() {
   	
   	
   	$('.gridcontainer').fadeOut('fast');
-  	$('.gridcontainer').empty();
+  	$('.gridcontainer').detach('.square');
 
  	for(var i = 0; i < rows; i++){
-  		$('.gridcontainer').append('<div class="row"></div>');
   		for(var j = 0; j < cols; j++){
-  			var sq = addSquare($('.gridcontainer').last());
+  			var sq = addSquare($('.gridcontainer'));
   		}
   	}
   	$('.square').css({'width' : sqwidth+'px', 'height': sqheight+'px'});
@@ -35,6 +34,10 @@ $(document).ready( function() {
   	var newColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 
     $(this).css('background-color', newColor);
+  });
+
+  $('.square').on('click', function(){
+  	alert('hi');
   });
 
 
