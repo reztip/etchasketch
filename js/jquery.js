@@ -1,28 +1,38 @@
-/*var xCols = 0;
-var yCols = 0;
+
 var gridWidth =  600; //in px
 var gridHeight = 600; //in px
-var count = 0;*/
-$(document).ready( function() {
 
+$(document).ready( function() {
   var resetGrid = function(rows, cols){
+  	var sqheight = gridHeight/rows - 2;
+  	var sqwidth = gridWidth/cols - 2;
+  	$('.square').css({'width' : sqwidth+'px', 'height': sqheight+'px'});
+  	
   	$('.gridcontainer').fadeOut('fast');
   	$('.gridcontainer').empty();
+
+ 	for(var i = 0; i < rows; i++){
+  		$('.gridcontainer').append('<div class="row"></div>');
+  		for(var j = 0; j < cols; j++){
+  			var sq = addSquare($('.gridcontainer').last());
+  		}
+  	}
+
   	$('.gridcontainer').fadeIn('slow');
   };
 
-  resetGrid(16,16);
-  $('.gridcontainer').click(function() {
+  var addSquare = function(elt){
+  	elt.append("<div class='square'></div>");
+  	return elt.last();
+  };
 
-  	$(this).add("<div class='square'>ok</div>");
+  resetGrid(16,16);
+
   
 
-  });
+  $('.square').on('mouseenter', function(){
 
-  $('.gridcontainer').on('hover', '.square', function(){
-
-  	$(this).css('background-color', 'black');
-  	$(this).fadeIn();
+  $(this).css('background-color', 'black');
   });
 
 
@@ -33,5 +43,4 @@ $(document).ready( function() {
   });
 
   
-
 });
